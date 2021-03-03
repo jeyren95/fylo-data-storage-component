@@ -1,0 +1,167 @@
+body {
+  background-color: 	#0c122c;
+  color: white;
+  font-family: "Raleway", sans-serif;
+}
+
+span {
+  font-weight: bold;
+}
+
+#first-half {
+  height: 50vh;
+}
+
+#second-half {
+  background-image: url("images/bg-desktop.png");
+  background-size: cover;
+  height: 50vh;
+}
+
+/*** Container ***/
+.container-fluid {
+  padding: 0 22%;
+}
+
+@media (max-width: 480px) {
+  #first-half {
+    height: 0vh;
+  }
+  #second-half {
+    background-image: url("images/bg-mobile.png");
+    background-size: cover;
+    height: 100vh;
+  }
+  .container-fluid {
+    padding: 35% 10%;
+  }
+}
+
+/*** Icon and storage containers ***/
+.icons, .storage {
+  padding: 4% 4%;
+  background-color: #1d2c67;
+  border-radius: 10px;
+}
+
+.icons {
+  margin-top: -10%;
+  margin-right: 4%;
+  border-top-right-radius: 100px;
+}
+
+@media (max-width: 480px) {
+  .icons, .storage {
+    padding: 10% 10%;
+  }
+  .storage p {
+    text-align: center;
+  }
+  .icons {
+    margin-top: 0;
+    margin-right: 0;
+    margin-bottom: 10%;
+  }
+}
+
+/*** Fylo icon column ***/
+.fylo-icon {
+  margin-top: 5%;
+  margin-bottom: 10%;
+}
+
+.other-icons svg {
+  margin-right: 5%;
+  background-color: #0c122c;
+  width: 45px;
+  height: 45px;
+  padding: 4% 4%;
+  border-radius: 10px;
+}
+
+/*** Data storage column ***/
+.storage {
+  margin-top: -5%;
+}
+
+/*** Storage speech bubble ***/
+.storage .remaining-storage {
+  border: solid thin;
+  border-radius: 10px;
+  border-bottom-right-radius: 0px;
+  background-color: white;
+  text-align: center;
+  padding: 2% 4%;
+  position: absolute;
+  right: 7%;
+  top: -25%;
+}
+
+.storage .remaining-storage::before{
+  content: "";
+  position: absolute;
+  border-left: 10px solid transparent;
+  border-right: 10px solid white;
+  border-top: 10px solid white;
+  border-bottom: 10px solid transparent;
+  right: -1%;
+  bottom: -25%;
+}
+
+@media (max-width: 480px) {
+  .storage .remaining-storage {
+    border-bottom-right-radius: 10px;
+    right: 30%;
+    top: 80%;
+  }
+  .storage .remaining-storage::before {
+    border-style: none;
+  }
+}
+
+.storage .remaining-storage h1 {
+  color: #0c122c;
+  font-weight: bold;
+}
+
+.storage .remaining-storage span {
+  font-size: 14px;
+  font-weight: bold;
+  color: #848794;
+}
+
+/*** Storage bar ***/
+.storage .storage-bar {
+  background-color: #0c122c;
+  border-radius: 15px;
+  height: 30px;
+}
+
+.storage .storage-bar .indicator-circle {
+  background-image: linear-gradient(to right, #ffa399, #ff4d97);
+  border-radius: 15px;
+  width: 80%;
+  position: relative;
+  top: 10%;
+  left: 0.5%;
+}
+
+.storage .storage-bar .fas {
+  position: relative;
+  left: 96%;
+}
+
+@media (max-width: 480px) {
+  .storage .storage-bar .fas {
+    left: 92%;
+  }
+}
+
+/*** Storage min and max numbers ***/
+.storage .storage-min-max {
+  margin-top: 1%;
+}
+
+.storage .storage-min-max .max {
+  float: right;
+}
