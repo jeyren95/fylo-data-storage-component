@@ -23,7 +23,7 @@ span {
   padding: 0 22%;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   #first-half {
     height: 0vh;
   }
@@ -31,26 +31,55 @@ span {
     background-image: url("images/bg-mobile.png");
     background-size: cover;
     height: 100vh;
+    display: grid;
+    place-content: center;
   }
   .container-fluid {
     padding: 35% 10%;
   }
 }
 
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .container-fluid {
+    padding: 0 5%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .container-fluid {
+    padding: 0 8%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container-fluid {
+    padding: 0 12%;
+  }
+}
+
+
+
 /*** Icon and storage containers ***/
 .icons, .storage {
   padding: 4% 4%;
   background-color: #1d2c67;
-  border-radius: 10px;
 }
 
 .icons {
-  margin-top: -10%;
-  margin-right: 4%;
+  position: relative;
+  bottom: 100px;
+  right: 20px;
   border-top-right-radius: 100px;
 }
 
-@media (max-width: 480px) {
+.storage {
+  border-radius: 10px;
+  position: relative;
+  bottom: 60px;
+  height: 175px;
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
   .icons, .storage {
     padding: 10% 10%;
   }
@@ -58,11 +87,45 @@ span {
     text-align: center;
   }
   .icons {
-    margin-top: 0;
-    margin-right: 0;
-    margin-bottom: 10%;
+    right: 0;
   }
 }
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .icons {
+    padding: 6% 3%;
+  }
+  .storage {
+    bottom: 80px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .icons {
+    padding: 4% 3%;
+    right: 10px;
+  }
+  .storage {
+    height: 150px;
+    bottom: 70px;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .icons {
+    bottom: 80px;
+  }
+  .storage {
+    height: 162px;
+  }
+}
+
+@media (min-width: 1025px) and (max-width: 1440px) {
+  .storage {
+    height: 148px;
+  }
+}
+
 
 /*** Fylo icon column ***/
 .fylo-icon {
@@ -79,9 +142,14 @@ span {
   border-radius: 10px;
 }
 
-/*** Data storage column ***/
-.storage {
-  margin-top: -5%;
+
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .fylo-icon {
+    margin-top: 15%;
+  }
+  .other-icons svg {
+    padding: 5.5% 5.5%;
+  }
 }
 
 /*** Storage speech bubble ***/
@@ -104,11 +172,11 @@ span {
   border-right: 10px solid white;
   border-top: 10px solid white;
   border-bottom: 10px solid transparent;
-  right: -1%;
-  bottom: -25%;
+  right: -0.5%;
+  bottom: -22%;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .storage .remaining-storage {
     border-bottom-right-radius: 10px;
     right: 30%;
@@ -116,6 +184,18 @@ span {
   }
   .storage .remaining-storage::before {
     border-style: none;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .storage .remaining-storage {
+    top: -30%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .storage .remaining-storage {
+    top: -35%;
   }
 }
 
@@ -151,9 +231,27 @@ span {
   left: 96%;
 }
 
-@media (max-width: 480px) {
+@media (min-width: 320px) and (max-width: 480px) {
   .storage .storage-bar .fas {
     left: 92%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .storage .storage-bar .fas {
+    left: 94%;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) and (orientation: landscape) {
+  .storage .storage-bar .fas {
+    left: 94%
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1440px) {
+  .storage .storage-bar .fas {
+    left: 95%;
   }
 }
 
